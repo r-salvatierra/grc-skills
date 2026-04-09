@@ -14,9 +14,20 @@ Assess a vendor's security posture in the context of how they are actually used:
 
 ---
 
-## Phase 1 — Intake: Required Inputs
+## Phase 1 — Intake
 
-All fields below are required before starting. If any are missing, ask for them.
+### What Is Required to Begin
+- Vendor name and what they provide
+- Q11 (data/system access) and Q13–Q16 (impact scores)
+- Whatever compliance evidence is available — full report, sections, or summary
+
+### Provide If Available — Not Required
+- Vendor type, hosting model, integration depth, assessor notes
+
+### Never Required — Do Not Ask For
+- Contracts, NDAs, DPAs, or any legal documents
+
+If Q11 and Q13–Q16 are present, begin immediately. Do not wait for additional inputs.
 
 ### Q11 — Vendor Access to SHIFT Assets
 Select all that apply:
@@ -217,7 +228,7 @@ Self-declared only — not independently verified. Acceptable as supplementary e
 
 ### Self-Assessment / Questionnaire Only
 
-No independent verification. Control score capped at 2. Require contractual DPA and right-to-audit clause as compensating controls.
+No independent verification. Control score capped at 2. Note absence of independent evidence in gaps; continue the assessment.
 
 ---
 
@@ -245,8 +256,6 @@ No independent verification. Control score capped at 2. Require contractual DPA 
 | Report >24 months old | Cap control score at 1 |
 | Vendor startup (<3 years, no independent audit) | Cap control score at 2 |
 | Vendor had public breach in last 36 months | +0.5 to inherent risk score |
-| DPA in place | −0.1 to residual score |
-| Right-to-audit clause in contract | −0.1 to residual score |
 | Sole-source vendor | Flag for escalation regardless of tier |
 
 ---
@@ -273,7 +282,7 @@ Apply qualitative modifiers after calculation.
 | Residual Score | Tier | Decision |
 |---|---|---|
 | ≤ 1.5 | Low | APPROVE — Annual review |
-| 1.6–2.5 | Medium | APPROVE WITH CONDITIONS — 6-month review; DPA required |
+| 1.6–2.5 | Medium | APPROVE WITH CONDITIONS — 6-month review |
 | 2.6–3.5 | High | CONDITIONAL — Remediation required within 90 days; 3-month review |
 | 3.6–5.0 | Critical | ESCALATE / REJECT — Senior sign-off and remediation plan required before proceeding |
 
@@ -317,7 +326,13 @@ Inherent Score   : [X.X] → [LOW / MEDIUM / HIGH / CRITICAL]
 1. [Description] — [High / Medium / Low] — [Recommended action]
 
 ── ASSESSOR OBSERVATIONS ───────────────────────
-[3–5 sentences of practitioner context. Include anything from the assessor notes field that affects the decision.]
+[Analytical judgement — not a restatement of scores or gaps. Address one or more of:
+ • What does this vendor's security maturity signal beyond the numbers?
+ • Is there risk concentration not captured by the score — sole-source, deep integration,
+   sensitive data type, known industry incidents for this vendor or sector?
+ • Does the evidence quality suggest the vendor treats compliance as substantive or as
+   a checkbox exercise?
+ • What should the next assessor specifically look for at re-assessment?]
 
 ── RESIDUAL RISK ────────────────────────────────
 Control Score    : [X / 5]
